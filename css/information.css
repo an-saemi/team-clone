@@ -1,0 +1,186 @@
+@import url("./common.css");
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    width: 90%;
+    margin: 40px auto;
+  }
+  main .topbtn {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 1;
+  }
+  main .topbtn img {
+    width: 100%;
+  }
+  main .contain {
+    width: 100%;
+    margin: 0 auto 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .contain .h3 {
+    width: 50%;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  main .contain .h3.active {
+    border-bottom: 2px solid #004032;
+  }
+  main .object {
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+  main .object .work {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+  }
+  main .object .work li {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #262626;
+    border-radius: 20px;
+    font-size: 12px;
+    text-align: center;
+  }
+  main .object .work li.active {
+    background-color: #FFDD78;
+  }
+  main .object .protect {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+    display: none;
+  }
+  main .object .protect li {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #262626;
+    border-radius: 20px;
+    font-size: 12px;
+    text-align: center;
+  }
+  main .object .protect li.active {
+    background-color: #FFDD78;
+  }
+  main .explain {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F4F1DE;
+    position: relative;
+  }
+  main .explain .word {
+    padding: 10px 10px 50px;
+  }
+  main .explain .word .h3 {
+    text-align: center;
+  }
+  main .explain .word .split {
+    text-align: center;
+  }
+  main .explain .word .string {
+    white-space: pre-line;
+    line-height: 1.3;
+  }
+  main .explain .btn .more {
+    width: 100%;
+    padding: 3px 0 5px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    border-top: 1px solid #ddd;
+    visibility: visible;
+  }
+  main .explain .btn .exit {
+    width: 100%;
+    padding: 3px 0 5px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    border-top: 1px solid #ddd;
+    visibility: hidden;
+  }
+  main .qna {
+    width: 100%;
+    margin: 60px auto;
+  }
+  main .qna .h5 {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  main .qna .box01 ul li {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  main .qna .box01 ul li .container {
+    width: 100%;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .qna .box01 ul li .container .question {
+    width: 80%;
+    font-size: 1em;
+  }
+  main .qna .box01 ul li .container .plus {
+    width: 5%;
+  }
+  main .qna .box01 ul li .container .plus span:nth-of-type(1) {
+    width: 15px;
+    height: 2px;
+    border-bottom: 2px solid #262626;
+  }
+  main .qna .box01 ul li .answer {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #F4F1DE;
+    font-size: 0.8em;
+    display: none;
+  }
+}
+/*# sourceMappingURL=information.css.map */
