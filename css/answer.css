@@ -2,7 +2,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   main {
     width: 90%;
-    margin: 40px auto;
+    margin: 170px auto 40px;
   }
   main .topbtn {
     position: fixed;
