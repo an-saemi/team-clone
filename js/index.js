@@ -1,71 +1,40 @@
-$('header').load('inc.html > header > .all', head);
-$('.popup').load('inc.html > .popup > .pop_bg');
-$('footer').load('inc.html > footer > .footer');
-
-function head() {
-    $('.headline').css('padding-top', '5px');
-
-    let scrolltop = '';
-
-    $(document).on('scroll', function () {
-        scrollTop = $(document).scrollY;
-
-        $('header').addClass('fixedH');
-
-        $('.tab').css('padding-top', '130px');
-        
-        if (scrollTop <= 100) {
-            $('header').removeClass('fixedH');
-            $('.tab').css('padding-top', '0px');
-        }
-    })
-
-    $('.burger').on('click', function () {
-        $('.popup').addClass('active');
-        $('.pop_bg').addClass('left');
-        // setAttribute는 나중에
-
-        $('.right').on('click', function () {
-            $('.popup').removeClass('active');
-            $('.pop_bg').css('transform', 'translateX(100%)');
-        })
-
-    })
-}
-
-let page ='';
+let page = '';
 let data = '';
 
 let elText = '';
-let text = document.querySelectorAll('.section01 .list p');
+let text = document.querySelectorAll('.section01 .list ul li');
 let chu = '';
 
-$.ajax({
-	url: './js/html.json',
-	success: function (dd) {
-		console.log(dd.url[0].information);
+// $.ajax({
+//     url: './js/html.json',
+//     success: function (dd) {
+//         // console.log(dd.url[0].information);
 
-		localStorage.setItem('url', JSON.stringify(dd.url[0]));
-		localStorage.setItem('node', JSON.stringify(dd.object));
+//         localStorage.setItem('url', JSON.stringify(dd.url[0]));
+//         localStorage.setItem('node', JSON.stringify(dd.object));
 
-		data = JSON.parse(localStorage.getItem('url'));
+//         data = JSON.parse(localStorage.getItem('url'));
+//         page = data.information;
+//         console.log(page);
+//     }
+// })
 
-		page = data.information;
-		console.log(page);
-	}
-})
-
-
+localStorage.name = '근로기준';
+localStorage.number = 0;
 
 text.forEach(function (el, idx) {
-	el.addEventListener('click', function () {
-		
-		localStorage.name = this.textContent;
-		location.replace('../information.html');
+    el.addEventListener('click', function () {
 
-		// elText += chu;
+        localStorage.name = this.textContent.trim();
+        location.replace('./information.html');
 
-	})
+        if (idx >= 8) {
+            localStorage.number = 1;
+        } else {
+            localStorafe.number = 0;
+        }
+
+    })
 })
 
 
@@ -76,14 +45,14 @@ $.ajax({
         let word = '';
         let mean = '';
 
-        console.log(num.data[ranNum]);
+        // console.log(num.data[ranNum]);
 
         $.each(num.data, function (i, v) {
             if (i == ranNum) {
                 word = `${num.data[i].용어명}`;
                 mean = `${num.data[i].설명}`;
-                
-                $('.todayWord p').html(word);
+
+                $('.todayWord b').html(word);
                 $('.wordEx').html(mean);
             }
         })

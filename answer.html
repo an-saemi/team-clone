@@ -12,53 +12,70 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/slick.min.js" type="text/javascript" charset="utf-8"></script>
     <script defer src="./js/slide_answer.js"> </script>
-    <script defer src="./js/common.js"></script>
+    <!-- <script defer src="./js/common.js"></script> -->
     <script defer src="./js/answer.js"></script>
+    <script defer src="./js/wordfilter.js"></script>
 </head>
 
+<!-- 버튼 클릭 시 페이지 변경 -->
 <body>
     <header></header>
     <div class="popup"></div>
 
+    <script src = "./js/common.js"></script>
+
     <main>
         <div class="topbtn">
-            <img src="./img/top.png">
+            <a href="#"><img src="./img/top.png"></a>
         </div>
         <div class="search">
-            <p><input type="text" required><img src="./img/icon/search.svg" style="width: 25px;"></p>
+            <p>
+                <input type="text" name="search" id="search">
+                <button><img src="./img/icon/search.svg" style="width: 25px;"></button>
+            </p>
+        </div>
+
+        <div class="relative">
+            <ul class="three">
+            </ul>
         </div>
 
         <div class="qna">
             <article>
                 <h3 class="h5">Q&A</h3>
-                <!-- <p>더보기＋</p> -->
             </article>
 
             <div class="box01">
                 <ul>
                     <!-- <li>
                         <div class="container">
-                            <p class="question">Q.</p>
+                            <p class="question">
+                                <b>Q.</b>
+                                <span>${v.question.cdata}</span>
+                            </p>
                             <p class="plus">
                                 <button><span></span><span></span></button>
                             </p>
                         </div>
-                        <div class="answer"></div>
+                        <div class="answer">
+                            <b>A.</b>
+                            <span>${v.answer.cdata}</span>
+                        </div>
                     </li> -->
                 </ul>
             </div>
             <div class="pagenum">
-                <button><img src="./img/icon/arrow_left.png"></button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <button><img src="./img/icon/arrow_right.png"></button>
+                <button class="img"><img src="./img/icon/arrow_left.png"></button>
+                <button class="num active">1</button>
+                <button class="num">2</button>
+                <button class="num">3</button>
+                <button class="num">4</button>
+                <button class="num">5</button>
+                <button class="img"><img src="./img/icon/arrow_right.png"></button>
             </div>
         </div>
 
-        <article class="play">
+        <!-- <article class="play">
             <h3 class="h5">추천영상</h3>
             <div class="play-list">
                 <ul class="slide">
@@ -106,7 +123,7 @@
                     </li>
                 </ul>
             </div>
-        </article>
+        </article> -->
     </main>
 
 

@@ -5,7 +5,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 0 20px;
+  padding: 130px 0 20px;
 }
 
 .tab > .sub {
@@ -45,15 +45,16 @@ main .section01 {
 }
 
 main .section01 > .title {
+  width: 100%;
   font-family: 'Do Hyeon', sans-serif;
   font-size: 2em;
   color: #004032;
-  font-weight: bold;
 }
 
 main .section01 > .board {
+  width: 100%;
+  padding: 8px;
   margin: 30px auto 0;
-  height: 200px;
   border: 1px solid #cdcdcd;
   border-radius: 30px;
 }
@@ -61,7 +62,6 @@ main .section01 > .board {
 main .section01 > .board > .list {
   width: 95%;
   margin: 0 auto;
-  height: 100%;
 }
 
 main .section01 > .board > .list > ul {
@@ -71,19 +71,19 @@ main .section01 > .board > .list > ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   vertical-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 10px 0;
 }
 
 main .section01 > .board > .list > ul > li {
-  border-radius: 15px;
   width: 19%;
+  margin: 2% auto 1%;
   padding: 10px 5px;
-  margin-top: 2%;
+  border-radius: 15px;
   background-color: #cdcdcd;
 }
 
@@ -112,17 +112,15 @@ main .section01 > .board > .list > ul > li > a > p {
 }
 
 main .section01 > .board > .list > ul > li:nth-of-type(9) > a > p {
-  padding-top: 5px;
-  font-size: 0.6em;
+  margin-top: 5px;
+  font-size: 0.8em;
   white-space: pre-line;
-  line-height: 0.6em;
 }
 
 main .section01 > .board > .list > ul > li:nth-of-type(10) > a > p {
-  padding-top: 5px;
-  font-size: 0.6em;
+  margin-top: 5px;
+  font-size: 0.8em;
   white-space: pre-line;
-  line-height: 0.6em;
 }
 
 main .section02 {
@@ -137,43 +135,62 @@ main .section02 {
   background-color: #FFDD78;
 }
 
-main .section02 > p:nth-of-type(1) {
+main .section02 .box_01 {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+main .section02 .box_01 .today {
   margin-top: 20px;
+  margin-bottom: 30px;
   font-family: 'Do Hyeon', sans-serif;
-  font-size: 2em;
   color: #26439E;
   font-weight: bold;
 }
 
-main .section02 > .todayWord {
-  margin-top: 40px;
+main .section02 .box_01 > .todayWord {
+  margin: 40px auto;
   text-align: center;
-  position: relative;
 }
 
-main .section02 > .todayWord > span > p {
+main .section02 .box_01 > .todayWord > span {
+  width: 70%;
+  z-index: 8;
+  position: absolute;
+  left: 47%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+}
+
+main .section02 .box_01 > .todayWord > span > b {
   font-size: 1.5em;
   color: #004032;
   font-weight: bold;
 }
 
-main .section02 > .todayWord > img {
-  display: block;
+main .section02 .box_01 > .todayWord > img {
+  width: 80%;
+  height: 45%;
   z-index: 10;
   position: absolute;
-  left: -77%;
-  top: -730%;
-  -webkit-transform-origin: 0, 0;
-          transform-origin: 0, 0;
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
+  left: 46%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
 }
 
-main .section02 > p:last-child {
-  margin-top: 30px;
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: 0.9em;
+main .section02 .box_01 .wordEx {
+  width: 90%;
+  margin-top: 50px;
+  margin: 120px auto 0;
+  padding-top: 60px;
   padding-bottom: 30px;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
 main .section03 {
@@ -187,6 +204,7 @@ main .section03 > p {
   font-size: 2em;
   color: #004032;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 main > .section04 {

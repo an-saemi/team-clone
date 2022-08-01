@@ -3,13 +3,19 @@ $.ajax({
     url: './api/worddictionary.json',
     success: function (word) {
         console.log('loading_fin');
-
+        //그냥 스크립트
         let list = [];
         let open = '';
         let result = '';
         let count = 0;
+        //검색
+        let allW = [];
+        let filW = [];
+        let inputT;
 
         $.each(word.data, function (key, value) {
+
+            //allW.push(`${value.용어명}`);
 
             if (key % 5 == 0 && key) {
                 list.push(result);
@@ -48,7 +54,24 @@ $.ajax({
                 $(this).find('span:eq(1)').addClass('on');
             })
         })
+
+        // console.log(allW);
+
+        // $('.search img').on('click', function () {
+        //     $('.wl ul').html('');
+        //     inputT = $('#search').val();
+
+        //     allW.forEach(function(v){
+        //         if(v.match(inputT)){
+        //             setTimeout(function(){
+        //                 filW.push(`<li>${v}</li>`);
+        //                 $('.wl ul').html(filW);
+        //             },1000)
+        //         }
+        //     })
+        // })
     }
 })
+
 
 
